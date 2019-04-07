@@ -1,0 +1,13 @@
+EXPORTS
+	Supports
+	Load
+	Unload
+	ProcessTick
+	OnGameModeInit
+	OnGameModeExit
+	OnPlayerRequestClass
+	OnPlayerSpawn
+	OnPlayerCommandText
+	OnPlayerKeyStateChange
+	OnPlayerText
+	OnPlayerUpdate
