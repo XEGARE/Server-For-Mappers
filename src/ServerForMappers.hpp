@@ -4,5 +4,5 @@
 
 #include "sampgdk.h"
 
-#include "commands.h"
-#include "flymode.h"
+#include "commands.hpp"
+#include "flymode.hpp"

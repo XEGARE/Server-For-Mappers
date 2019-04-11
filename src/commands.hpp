@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <stdio.h>
 #include "sampgdk.h"
-#include "flymode.h"
+#include "flymode.hpp"
 
 using namespace std;
 

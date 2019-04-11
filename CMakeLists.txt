@@ -21,10 +21,10 @@ add_samp_plugin(${PROJECT_NAME}
   lib/sampgdk.c
   lib/sampgdk.h
   src/ServerForMappers.def
-  src/ServerForMappers.h
+  src/ServerForMappers.hpp
   src/ServerForMappers.cpp
-  src/flymode.h
+  src/flymode.hpp
   src/flymode.cpp
-  src/commands.h
+  src/commands.hpp
   src/commands.cpp
 )

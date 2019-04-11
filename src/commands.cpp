@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-#include "commands.h"
+#include "commands.hpp"
 
 extern array <noclipenum, MAX_PLAYERS> noclipdata;
 

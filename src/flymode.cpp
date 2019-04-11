@@ -1,4 +1,4 @@
-#include "flymode.h"
+#include "flymode.hpp"
 
 #define PRESSED(x) \
 				(((*newkeys & (x)) == (x)) && ((*oldkeys & (x)) != (x)))
