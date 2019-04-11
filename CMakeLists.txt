@@ -17,7 +17,7 @@ include_directories(s
 add_definitions(-DSAMPGDK_AMALGAMATION)
 
 add_samp_plugin(${PROJECT_NAME}
-  lib/amxplugin.cpp
+  lib//sdk/amxplugin.cpp
   lib/sampgdk.c
   lib/sampgdk.h
   src/ServerForMappers.def
