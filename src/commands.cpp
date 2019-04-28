@@ -1,5 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS
-
 #include "commands.hpp"
 
 extern array <noclipenum, MAX_PLAYERS> noclipdata;
@@ -12,7 +10,7 @@ bool cmd_tpk(int &playerid, string &params)
 	replace(params.begin(), params.end(), '}', ' ');
 	float X, Y, Z;
 	int interior = 0, world = 0;
-	if (sscanf(params.c_str(), "%f%f%f%d%d", &X, &Y, &Z, &interior, &world) < 3)
+	if (sscanf_s(params.c_str(), "%f%f%f%d%d", &X, &Y, &Z, &interior, &world) < 3)
 		return SendClientMessage(playerid, -1, "Используйте: /тпк (x y z) [INT World]");
 
 	if (noclipdata[playerid].flymode) SetPlayerObjectPos(playerid, noclipdata[playerid].flyobject, X, Y, Z);
@@ -31,12 +29,15 @@ bool cmd_tpk(int &playerid, string &params)
 
 bool cmd_jetpack(int &playerid, string &params)
 {
-	return SetPlayerSpecialAction(playerid, SPECIAL_ACTION_USEJETPACK);
+	return
+		SetPlayerSpecialAction(playerid, SPECIAL_ACTION_USEJETPACK);
 }
 
 bool cmd_flymode(int &playerid, string &params)
 {
-	if (noclipdata[playerid].flymode) noclipdata[playerid].CancelFlyMode(playerid);
-	else noclipdata[playerid].FlyMode(playerid);
+	if (noclipdata[playerid].flymode)
+		noclipdata[playerid].CancelFlyMode(playerid);
+	else
+		noclipdata[playerid].FlyMode(playerid);
 	return true;
 }
