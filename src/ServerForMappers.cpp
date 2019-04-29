@@ -43,7 +43,7 @@ PLUGIN_EXPORT bool PLUGIN_CALL OnGameModeInit() {
 
 PLUGIN_EXPORT bool PLUGIN_CALL OnGameModeExit()
 {
-	for (static int i; i < MAX_PLAYERS; i++) if (noclipdata[i].cameramode)
+	for (int i = 0; i < MAX_PLAYERS; i++) if (noclipdata[i].cameramode)
 		noclipdata[i].CancelFlyMode(i);
 	return true;
 }
@@ -51,7 +51,7 @@ PLUGIN_EXPORT bool PLUGIN_CALL OnGameModeExit()
 PLUGIN_EXPORT bool PLUGIN_CALL OnPlayerRequestClass(int playerid,
                                                     int classid)
 {
-	for (static int i; i < 50; i++)
+	for (int i = 0; i < 50; i++)
 		SendClientMessage(playerid, -1, "");
 
 	SetSpawnInfo(playerid, 0, 303, 1958.3783f, 1343.1572f, 15.3746f, -90.0f, 0, 0, 0, 0, 0, 0);
