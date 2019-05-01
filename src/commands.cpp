@@ -10,8 +10,8 @@ bool cmd_tpk(int &playerid, string &params)
 	replace(params.begin(), params.end(), '}', ' ');
 	float X, Y, Z;
 	int interior = 0, world = 0;
-	if (sscanf_s(params.c_str(), "%f%f%f%d%d", &X, &Y, &Z, &interior, &world) < 3)
-		return SendClientMessage(playerid, -1, "Èñïîëüçóéòå: /òïê (x y z) [INT World]");
+	if (sscanf(params.c_str(), "%f%f%f%d%d", &X, &Y, &Z, &interior, &world) < 3)
+		return SendClientMessage(playerid, -1, "ÃˆÃ±Ã¯Ã®Ã«Ã¼Ã§Ã³Ã©Ã²Ã¥: /Ã²Ã¯Ãª (x y z) [INT World]");
 
 	if (noclipdata[playerid].flymode) SetPlayerObjectPos(playerid, noclipdata[playerid].flyobject, X, Y, Z);
 	else {
